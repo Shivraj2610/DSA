@@ -12,14 +12,14 @@ public class FirstNonRepeatingChar {
                     continue;
                 }
                 if (arr[i] == arr[j]) {
-                    System.out.println("in condition");
+
                     flag = true;
                     break;
                 }
             }
 
             if (!flag) {
-                System.out.println("hello");
+
                 return i;
             }
         }
@@ -27,7 +27,7 @@ public class FirstNonRepeatingChar {
     }
 
     public static void main(String[] args) {
-        String str = "ShivrajSayahivrjy";
+        String str = "ShivrajSayahZivrjy";
         str = str.toUpperCase();
 
         int index = findfirstNonRepratingChar(str);
