@@ -1,7 +1,8 @@
-package DSA;
 
 class Hello {
     public static void main(String[] args) {
-        System.out.println("hello");
+        int a = -1;
+        int res = (-32 * 10) + a;
+        System.out.println(res);
     }
 }
