@@ -1,8 +1,14 @@
+import java.util.Stack;
 
 class Hello {
     public static void main(String[] args) {
-        int a = -1;
-        int res = (-32 * 10) + a;
-        System.out.println(res);
+        Stack<Integer> stack = new Stack<>();
+        stack.push(5);
+        stack.push(7);
+        stack.push(9);
+        stack.push(87);
+        System.out.println(stack);
+        stack.pop();
+        System.out.println(stack);
     }
 }
