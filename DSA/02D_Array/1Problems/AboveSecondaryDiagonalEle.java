@@ -33,6 +33,17 @@ public class AboveSecondaryDiagonalEle {
                 }
             }
         }
+        System.out.println();
+
+        System.out.println("The Elements above Primary Diagonal");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                if (j > i) {
+                    System.out.print(arr[i][j] + " ");
+                }
+            }
+        }
+        System.out.println();
 
         System.out.println("The Elements on the both Diagonal");
         for (int i = 0; i < row; i++) {

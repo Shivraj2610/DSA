@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class RateInMaze {
 
     public static void printOutput(int[][] output, int n) {
@@ -69,13 +71,20 @@ public class RateInMaze {
     }
 
     public static void main(String[] args) {
-        int[][] maze = { { 1, 0, 1, 0 },
-                { 1, 1, 1, 0 },
-                { 1, 1, 1, 0 },
-                { 1, 0, 1, 1 }
-        };
+        Scanner sc = new Scanner(System.in);
 
-        int n = maze.length;
+        System.out.println("Enter the Size of Maze: ");
+        int n = sc.nextInt();
+        int[][] maze = new int[n][n];
+
+        System.out.println("Create a Maze: ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                maze[i][j] = sc.nextInt();
+            }
+        }
+
+        // int n = maze.length;
 
         int[][] output = new int[n][n];
 
