@@ -8,9 +8,10 @@ import java.util.List;
 public class MaxNumber_Deque {
     public static List<Integer> findMaxNumber(int arr[], int n, int k) {
         List<Integer> list = new ArrayList<>();
-
         Deque<Integer> dq = new LinkedList<>();
+
         for (int i = 0; i < k; i++) {
+            // Remove peekLast() number if it is smaller than current
             while (!dq.isEmpty() && arr[dq.peekLast()] <= arr[i]) {
                 dq.removeLast();
             }
@@ -25,6 +26,7 @@ public class MaxNumber_Deque {
                 dq.pop();
             }
 
+            // Remove peekLast() number if it is smaller than current
             while (!dq.isEmpty() && arr[dq.peekLast()] <= arr[j]) {
                 dq.removeLast();
             }

@@ -21,6 +21,7 @@ public class RatinMaze {
             // printMaze(output, n);
         }
 
+        // Check the position is safe or not
         if (row >= 0 && row < n && col >= 0 && col < n) {
             // System.out.println("hello");
             if (output[row][col] == 1 || maze[row][col] == 0) {
@@ -31,13 +32,11 @@ public class RatinMaze {
 
             // Down
             solveMaze(row + 1, col, maze, n, ans + "D", output);
-            // To Left
-            solveMaze(row, col - 1, maze, n, ans + "L", output);
+
             // To Right
             solveMaze(row, col + 1, maze, n, ans + "R", output);
-            // To Up
-            solveMaze(row - 1, col, maze, n, ans + "U", output);
 
+            // Backtracking
             output[row][col] = 0;
         }
     }

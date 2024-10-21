@@ -15,6 +15,7 @@ public class Quick {
         arr[low] = arr[i];
         arr[i] = temp;
 
+        // Return the final position of pivot
         return i;
     }
 
@@ -22,11 +23,11 @@ public class Quick {
         if (low < high) {
 
             // 1.Divide Array into SubArray
-            int m = partition(arr, low, high);
+            int pivotInd = partition(arr, low, high);
 
             // 2. Conquer SubArray
-            quickSort(arr, low, m - 1);
-            quickSort(arr, m + 1, high);
+            quickSort(arr, low, pivotInd - 1);
+            quickSort(arr, pivotInd + 1, high);
 
             // 3.No Need Combine
 
@@ -47,7 +48,7 @@ public class Quick {
 
         printArr(arr, n);
 
-        quickSort(arr, 0, n);
+        quickSort(arr, 0, n - 1);
 
         printArr(arr, n);
     }

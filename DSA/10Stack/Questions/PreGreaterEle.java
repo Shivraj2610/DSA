@@ -17,7 +17,7 @@ public class PreGreaterEle {
                 preGreater[i] = s.peek();
             }
 
-            s.push(arr[i]);
+            s.push(i);
         }
 
         for (int i = 0; i < arr.length; i++) {

@@ -45,7 +45,7 @@ public class MedianOfTwoSortedArr {
     }
 
     public static void main(String[] args) {
-        int[] arr1 = { 7, 8, 9 };
+        int[] arr1 = { 7, 8, 9, 11 };
         int[] arr2 = { 1, 2, 3, 4, 5 };
 
         double ans = findMedian(arr1, arr2);

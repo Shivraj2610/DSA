@@ -1,7 +1,7 @@
 //Find The Maximum value of SubArray of size k from array of size n
 public class MaxSum {
     public static void main(String[] args) {
-        int[] arr = { 40, 5, 7, 1, 9, 4, 9, 4, 8 };
+        int[] arr = { 4, 5, 2, 1, 9, 4, 1, 4, 8 };
         int k = 3;
         int wSum = 0;
         int mSum = Integer.MIN_VALUE;

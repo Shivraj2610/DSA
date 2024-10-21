@@ -1,14 +1,19 @@
-import java.util.Stack;
+import java.util.Arrays;
 
-class Hello {
+public class Hello {
+    public static String sortString(String str) {
+        char[] sort = str.toCharArray();
+        Arrays.sort(sort);
+        return new String(sort);
+    }
+
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        stack.push(5);
-        stack.push(7);
-        stack.push(9);
-        stack.push(87);
-        System.out.println(stack);
-        stack.pop();
-        System.out.println(stack);
+        String[] arr = { "bat", "mat", "cat" };
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sortString(arr[i]);
+            System.out.println(arr[i]);
+        }
+
     }
 }

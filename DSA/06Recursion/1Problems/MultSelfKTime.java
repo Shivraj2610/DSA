@@ -3,7 +3,7 @@ public class MultSelfKTime {
         int mult = 0;
         if (k == 1) {
             System.out.println(n);
-            ;
+
         } else {
             multiplyKTime(n, k - 1);
             mult = n * k;

@@ -11,17 +11,20 @@ public class QuickSort {
                 // increment i
                 i++;
                 // swap(arr[i],arr[j])
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                swap(arr, i, j);
+
             }
         }
         // swap(pivot,arr[i])
-        int temp = arr[low];
-        arr[low] = arr[i];
-        arr[i] = temp;
+        swap(arr, low, i);
 
         return i;
+    }
+
+    static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     public static void quickSort(int[] arr, int low, int high) {

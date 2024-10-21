@@ -40,10 +40,12 @@ public class Sudocu {
             ncol = 0;
         }
 
+        // We can't change default numbers in Sudocu
         if (sudocu[row][col] != 0) {
             if (helper(sudocu, nrow, ncol)) {
                 return true;
             }
+            // If There is no any default number in sudocu cell then run else part
         } else {
             for (int i = 1; i <= 9; i++) {
                 if (isSafe(sudocu, row, col, i)) {
